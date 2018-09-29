@@ -1,0 +1,18 @@
+
+                
+                   <span  
+                   [class.strike]="posts.status" 
+                   style="font-size:25px;color:brown" 
+                    (click)="changeName()" 
+                     *ngIf='!posts.isInput' >
+                    {{posts.title}}
+                           
+              </span> 
+                <input  appFocus
+                *ngIf='posts.isInput' 
+                [(ngModel)]='posts.title'  
+                type="text" class="text" autofocus
+                 (focusout)='updatename()'
+                   (keyup.enter)='updatename()' 
+                   > 
+                
